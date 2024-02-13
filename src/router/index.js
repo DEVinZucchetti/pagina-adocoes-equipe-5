@@ -6,6 +6,7 @@ import Home2 from '../views/pessoa2/HomeCTA.vue'
 import Home3 from '../views/pessoa3/Home.vue'
 import Home4 from '../views/pessoa4/Home.vue'
 import PetsList from '../views/pessoa2/PetsList.vue'
+import Profile from '../views/pessoa2/Profile.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,7 +41,11 @@ const router = createRouter({
       name: 'PetsList',
       component: PetsList
     },
-   
+    {
+      path: '/pets-adocao/:id/perfil',
+      name: 'Profile',
+      component: Profile
+    }
   ]
 })
 

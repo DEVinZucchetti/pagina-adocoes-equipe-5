@@ -16,18 +16,18 @@
 import PetService from '@/service/PetService.js';
 
 export default {
-  data() {  
+  data() {
     return {
       pets: []
     }
   },
   methods: {
-    redirectToProfile(petId){
-        this.$router.push(`/pets-adocao/${petId}/perfil`)
+    redirectToProfile(petId) {
+      this.$router.push(`/pets-adocao/${petId}/perfil`)
     }
   },
   mounted() {
-   PetService.getAllPets()
+    PetService.getAllPets()
       .then((data) => {
         this.pets = data
       })
