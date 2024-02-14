@@ -2,9 +2,11 @@ import axios from 'axios'
 
 class PetService {
 
-  async getAllPets(){
-    const response = await axios.get("http://localhost:8000/api/pets/adocao")
-    return response.data
+  async getAllPets(searchParams) {
+    const response = await axios.get("http://localhost:8000/api/pets/adocao", {
+      params: searchParams
+    });
+    return response.data;
   }
 
   async getOnePet(id) {
